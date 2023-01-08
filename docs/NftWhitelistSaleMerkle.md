@@ -19,7 +19,7 @@ contract NftWhitelistSaleMerkle is Sample {
 
 ```uint256 public presaleActiveTime;```
 
-`L6 [QA/Logic/Medium]` – Setting presale start time to `0`, in conjuction with logic contained in `purchaseTokensPresale` (`block.timestamp` compared against `0`, which is always `true`), activates the presale immediately after deployment. Unless this is the intent, this is a potential violation of the business logic of the contract. 
+`L6 [Logic/Medium]` – Setting presale start time to `0`, in conjuction with logic contained in `purchaseTokensPresale` (`block.timestamp` compared against `0`, which is always `true`), activates the presale immediately after deployment. Unless this is the intent, this is a potential violation of the business logic of the contract. 
 
 ## purchaseTokensPresale
 ``` ts linenums="1"

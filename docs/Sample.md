@@ -43,6 +43,8 @@ contract Sample is ERC721A("Sample", "SampleNFT"), Ownable, ERC2981 {
 
 ```uint256 public publicMintActiveTime;```
 
+`L26 [Logic/Medium]` – Setting sale start time to `0`, in conjuction with logic contained in `purchaseTokens` (`block.timestamp` compared against `0`, which is always `true`), activates the sale immediately after deployment. Unless this is the intent, this is a potential violation of the business logic of the contract.
+
 ## purchaseTokens
 
 ``` ts linenums="1"    
