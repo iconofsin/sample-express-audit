@@ -1,0 +1,20 @@
+site_name: Sample Express Audit
+theme:
+  name: material
+  language: en
+  features:
+    - content.code.annotate 
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      use_pygments: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+plugins:
+  - search
+  - callouts
